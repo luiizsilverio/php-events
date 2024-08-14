@@ -2,11 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    $nome = "Luiz";
-    $lista = [10, 20, 30, 40, 50];
-    return view('welcome', ['nome' => $nome, 'lista' => $lista]);
-});
+use App\Http\Controllers\EventController;
+
+Route::get('/', [EventController::class, 'index']);
+Route::get('/events/create', [EventController::class, 'create']);
 
 Route::get('/sobre', function () {
     return view('sobre');
