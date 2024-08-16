@@ -4,23 +4,30 @@
 
 @section('content')
 
-    <img src="/img/banner.jpg" height="150" alt="Banner">
-    <h1>Home</h1>
-    @if(10 > 5)
-        <p>Verdadeiro</p>
-    @else
-        <p>Falso</p>
-    @endif
+<div id="search-container" class="col-md-12">
+    <h1>Procurar evento</h1>
+    <form action="">
+        <input type="text" id="search" name="search" class="form-control" placeholder="Digite aqui..." >
+    </form>
+</div>
 
-    <p>{{ $nome }}</p>
-    <p>{{ $profissao ?? 'dev' }}</p>
-
-    <!-- Comentário do HTML será exibido no código HTML -->
-    {{-- Comentário do Blade não será exibido no código HTML --}}
-
-    @for($i = 0; $i < count($lista); $i++)
-        <p>{{ $lista[$i] }}</p>
-    @endfor
+<div id="events-container" class="col-md-12">
+    <h2>Próximos Eventos</h2>
+    <p>Veja os eventos dos próximos dias</p>
+    <div id="cards-container" class="row">
+        @foreach($events as $event)
+            <div class="card col-md-3">
+                <img src="/img/event_placeholder.jpg" alt="{{ $event['title'] }}">
+                <div class="card-body">
+                    <div class="card-date">10/09/2024</div>
+                    <h5 class="card-title">{{ $event['title'] }}</h5>
+                    <p class="card-participants">X Participantes</p>
+                    <a href="#" class="btn btn-primary">Saber mais</a>
+                </div>
+            </div>
+        @endforeach
+    </div>
+</div>
 
 @endsection
 

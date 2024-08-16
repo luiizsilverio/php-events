@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Event;
 
 class EventController extends Controller
 {
     public function index() {
-        $nome = "Luiz";
-        $lista = [10, 20, 30, 40, 50];
+        $events = Event::all();
 
         // exibe a view que está em views/welcome.blade.php
-        return view('welcome', ['nome' => $nome, 'lista' => $lista]);
+        return view('welcome', ['events' => $events]);
     }
 
     public function create() {
