@@ -9,14 +9,16 @@ class EventController extends Controller
 {
     public function index() {
         $events = Event::all();
+        return view('welcome', ['events' => $events]); // exibe a view que está em views/welcome.blade.php
+    }
 
-        // exibe a view que está em views/welcome.blade.php
-        return view('welcome', ['events' => $events]);
+    public function show($id) {
+        $event = Event::findOrFail($id);
+        return view('events.show', ['event' => $event]); // exibe a view que está em views/events/show.blade.php
     }
 
     public function create() {
-        // exibe a view que está em views/events/create.blade.php
-        return view('events.create');
+        return view('events.create'); // exibe a view que está em views/events/create.blade.php
     }
 
     public function store(Request $request) {
@@ -26,6 +28,7 @@ class EventController extends Controller
         $event->city = $request->city;
         $event->private = $request->private;
         $event->description = $request->description;
+        $event->itens = $request->itens;
 
         // Image Upload
         if($request->hasFile('image') && $request->file('image')->isValid()) {
@@ -37,7 +40,7 @@ class EventController extends Controller
         }
 
         $event->save();
-
         return redirect('/')->with('msg', 'Evento criado com sucesso!');
     }
+
 }
