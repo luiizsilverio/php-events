@@ -22,12 +22,12 @@
         @foreach($events as $event)
             <div class="card col-md-3">
                 @if(!empty($event->image))
-                    <img src="/img/events/{{ $event->image }}" alt="{{ $event->title }}">
+                <img src="/img/events/{{ $event->image }}" alt="{{ $event->title }}">
                 @endif
                 <div class="card-body">
                     <div class="card-date">{{ date('d/m/Y', strtotime($event->date)) }}</div>
                     <h5 class="card-title">{{ $event->title }}</h5>
-                    <p class="card-participants">X Participantes</p>
+                    <p class="card-participants">50 Participantes</p>
                     <a href="/events/{{ $event->id }}" class="btn btn-primary">Saber mais</a>
                 </div>
             </div>

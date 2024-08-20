@@ -17,6 +17,7 @@ class EventController extends Controller
             } else {
             $events = Event::all();
         }
+
         return view('welcome', ['events' => $events, 'search' => $search]);
         // exibe a view que está em views/welcome.blade.php
     }
@@ -40,6 +41,9 @@ class EventController extends Controller
         $event->private = $request->private;
         $event->description = $request->description;
         $event->itens = $request->itens;
+
+        $user = auth()->user();
+        $event->user_id = $user->id;
 
         // Image Upload
         if($request->hasFile('image') && $request->file('image')->isValid()) {
