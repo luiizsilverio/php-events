@@ -19,10 +19,10 @@
                 <ion-icon name="pin"></ion-icon> {{ $event->city }}
             </p>
             <p class="events-participantes">
-                <ion-icon name="people"></ion-icon> X participantes
+                <ion-icon name="people"></ion-icon> 50 participantes
             </p>
             <p class="event-owner">
-                <ion-icon name="star-outline"></ion-icon> Responsável pelo evento
+                <ion-icon name="star-outline"></ion-icon> {{ $owner['name'] }}
             </p>
 
             <a href="#" class="btn btn-primary" id="event-submit">Confirmar Presença</a>
