@@ -10,7 +10,7 @@
 
 
 ## Sobre a aplicação
-Site desenvolvido em __PHP__ e __Laravel__, com autenticação __JetStream__, durante o curso de 31 vídeos [Curso de Laravel](https://www.youtube.com/playlist?list=PLnDvRpP8BnewYKI1n2chQrrR4EYiJKbUG), do canal do _Matheus Battisti_ no __Youtube__.<br />
+Site desenvolvido em __PHP__ e __Laravel__ com autenticação __JetStream__, durante o curso de 31 vídeos [Curso de Laravel](https://www.youtube.com/playlist?list=PLnDvRpP8BnewYKI1n2chQrrR4EYiJKbUG), do canal do _Matheus Battisti_ no __Youtube__.<br />
 <br />
 
 ## :hammer_and_wrench: Tecnologias
@@ -20,7 +20,6 @@ Site desenvolvido em __PHP__ e __Laravel__, com autenticação __JetStream__, du
 * Banco de dados __MySQL__
 * Template Engine __Blade__
 * Estilos com __Bootstrap__
-<br />
 <br />
 
 ## :camera_flash: Screenshots
