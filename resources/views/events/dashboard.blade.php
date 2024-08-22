@@ -25,7 +25,7 @@
                                 <td><a href="/events/{{ $event->id }}">{{ $event->title }}</a></td>
                                 <td>50</td>
                                 <td>
-                                    <a href="#" class="btn btn-info btn-sm edit-btn">
+                                    <a href="/events/edit/{{ $event->id }}" class="btn btn-info btn-sm edit-btn">
                                         <ion-icon name="create"></ion-icon>
                                         Editar
                                     </a>
