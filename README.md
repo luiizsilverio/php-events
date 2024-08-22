@@ -1,4 +1,4 @@
-# PHP-EVENTS
+# PHP-EVENTS 🎎
 
 
 ## Conteúdo
@@ -7,7 +7,7 @@
 * [Screenshots](#camera_flash-screenshots)
 * [Contato](#email-contato)
 
-
+<br />
 
 ## Sobre a aplicação
 Site desenvolvido em __PHP__ e __Laravel__ com autenticação __JetStream__, durante o curso de 31 vídeos [Curso de Laravel](https://www.youtube.com/playlist?list=PLnDvRpP8BnewYKI1n2chQrrR4EYiJKbUG), do canal do _Matheus Battisti_ no __Youtube__.<br />
